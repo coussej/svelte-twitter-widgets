@@ -1,0 +1,32 @@
+{
+  "name": "svelte-twitter-widgets",
+  "version": "0.1.0",
+  "description": "Svelte components for the official twitter widgets.",
+  "main": "dist/svelte-twitter-widgets.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coussej/svelte-twitter-widgets.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "svelte",
+    "twitter"
+  ],
+  "author": "Jeroen Coussement",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coussej/svelte-twitter-widgets/issues"
+  },
+  "homepage": "https://github.com/coussej/svelte-twitter-widgets#readme",
+  "devDependencies": {
+    "rollup": "^0.50.0",
+    "rollup-plugin-svelte": "^3.1.0",
+    "standard": "^10.0.3"
+  }
+}

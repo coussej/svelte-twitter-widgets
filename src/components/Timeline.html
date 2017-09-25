@@ -1,0 +1,47 @@
+<a class="{{ timelineClass }}" href="{{ href }}" data-lang="{{ lang }}"
+   data-show-replies="{{ showReplies }}" data-chrome="{{ chrome }}" 
+   data-theme="{{ theme }}" data-width="{{ width }}" data-height="{{ height }}"
+   data-tweet-limit="{{ tweetLimit }}" data-link-color="{{ linkColor }}" 
+   data-border-color="{{ borderColor }}" data-aria-polite="{{ ariaPolite }}"
+   data-dnt="{{ dnt }}">
+  
+  Tweets from {{ href }}.
+
+</a>
+
+<script>
+  import twitter from '../twitter.js'
+
+  export default {
+
+    data () {
+      return {
+        href: 'https://twitter.com/sveltejs',
+        grid: false,
+        lang: undefined,
+        showReplies: undefined,
+        chrome: undefined,
+        theme: undefined,
+        width: undefined,
+        height: undefined,
+        tweetLimit: undefined,
+        linkColor: undefined,
+        borderColor: undefined,
+        ariaPolite: undefined,
+        dnt: undefined
+      }
+    },
+
+    computed: {
+      timelineClass: (href, grid) => {
+        if (href.indexOf('/timelines/') > -1 && grid) return 'twitter-grid'
+        return 'twitter-timeline'
+      }
+    },
+
+    oncreate () {
+      twitter.loadAPI()
+    }
+
+  }
+</script>

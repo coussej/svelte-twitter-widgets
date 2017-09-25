@@ -1,0 +1,34 @@
+<blockquote class="twitter-tweet" data-cards="{{ cards }}" 
+  data-conversation="{{ conversation }}" data-theme="{{ theme }}" 
+  data-link-color="{{ linkColor }}" data-width="{{ width }}"
+  data-align="{{ align }}" data-lang="{{ lang }}" data-dnt="{{ dnt }}">
+
+  <a href="{{ href }}">Tweet from {{href}}.</a>
+
+</blockquote> 
+
+<script>
+  import twitter from '../twitter.js'
+
+  export default {
+
+    data () {
+      return {
+        href: 'https://twitter.com/sveltejs/status/802710541366128640',
+        cards: undefined,
+        conversation: undefined,
+        theme: undefined,
+        linkColor: undefined,
+        width: undefined,
+        align: undefined,
+        lang: undefined,
+        dnt: undefined
+      }
+    },
+
+    oncreate () {
+      twitter.loadAPI()
+    }
+
+  }
+</script>
