@@ -4,6 +4,13 @@ Svelte wrapper for the [official twitter widgets](https://dev.twitter.com/web/ov
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
+## Installation
+
+```
+npm install --save svelte-twitter-widgets
+```
+
+
 ## Usage
 
 Use as a normal svelte component.
